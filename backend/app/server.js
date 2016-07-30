@@ -26,4 +26,7 @@ app.post('/events', function (req, res) {
     res.json(db.create(req.body.event));
 });
 
+var apppath = require('path').resolve(__dirname + '/../../frontend');
+app.use('/', express.static(apppath));
+
 module.exports = app;
