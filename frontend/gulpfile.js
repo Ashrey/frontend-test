@@ -35,7 +35,7 @@ var browserify_compiler = function(path,done) {
         var tasks = files.map(function(entry) {
             return browserify({
                 entries: [entry],
-                paths: ['./node_modules','.src/js'],
+                paths: ['./node_modules','./src/js'],
                  extensions: ['.js']
             })
             .transform(babelify)

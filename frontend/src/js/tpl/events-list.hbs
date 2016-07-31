@@ -1,0 +1,36 @@
+<div class="medium-9 small-12 column" id="left-col">
+{{#events}}
+    {{#with attributes}}
+    <div class="small-12 medium-6 large-4 column end">
+        <div class="a-card">
+            <div class="v-align">
+                <img src="{{eventImage}}" alt="Picture of {{title}}"/>
+            </div>
+            <h3>{{title}}</h3>
+
+            <div class="text-right">
+                <a href="#view/{{id}}" class="button">View More</a>
+            </div>
+
+            <button class="close-button" type="button" data-shared="{{id}}">
+                <span aria-hidden="true"><img src="/img/share.png" width="24"/></span>
+            </button>
+        </div>
+
+
+    </div>
+    {{/with}}
+{{/events}}
+</div>
+
+<div class="medium-3 small-12 column"  id="right-col">
+{{#features}}
+    {{#with attributes}}
+    <div class="small-12">
+        {{title}}
+    </div>
+    {{/with}}
+{{else}}
+No hay eventos
+{{/features}}
+</div>

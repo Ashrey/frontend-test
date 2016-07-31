@@ -1,0 +1,23 @@
+.list-event{
+    .a-card{
+        border: 1px solid #666;
+        padding: 1rem;
+        position: relative;
+        .v-align{
+            height: 250px;
+            text-align: center;
+        }
+
+        h3{
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        img{
+            max-height: 230px;
+            vertical-align: middle;
+            line-height: normal;
+        }
+    }
+}
