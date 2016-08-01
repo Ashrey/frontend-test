@@ -1,6 +1,7 @@
 var Backbone      = require('backbone');
 var ListEventView = require('view/listEvent');
 var $             = require('jquery');
+var DetailsView   = require('view/details');
 
 module.exports = Backbone.Router.extend({
 
@@ -9,7 +10,7 @@ module.exports = Backbone.Router.extend({
         var este = this;
         this.events   = options.collection;
         this.featured = options.featured;
-        //WHEN  both load 
+        //WHEN  both load
         $.when(this.events.fetch(), this.featured.fetch()).then(function(){
             Backbone.history.start();
         });
@@ -31,5 +32,23 @@ module.exports = Backbone.Router.extend({
             features: this.featured
         });
         $('#content').html(this.currentView.$el);
+    },
+
+    view: function(id){
+        if(this.currentView){
+            this.currentView.close();
+        }
+
+        var model = this.events.get(id);
+        if(!model){
+            toastr.error('El evento seleccionado no existe');
+            window.location.hash= '/';
+        }
+
+        this.currentView = new DetailsView({
+            model: model
+        });
+        $('#content').html(this.currentView.$el);
+
     }
 });

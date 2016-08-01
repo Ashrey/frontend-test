@@ -1,0 +1,17 @@
+<div class="medium-9 small-12 column" id="left-col">
+    <h2>{{title}} <small>{{location}}</small></h2>
+    <p>{{description}}</p>
+</div>
+
+<div class="medium-3 small-12 column"  id="right-col">
+    <div class="small-12">
+        <img src="{{eventImage}}"  alt="Imagen para {{title}}"/>
+    </div>
+    {{#if dates}}
+    <ul>
+        {{#dates}}
+            <li>{{this}}</li>
+        {{/dates}}
+    </ul>
+    {{/if}}
+</div>
