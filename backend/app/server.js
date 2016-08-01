@@ -23,7 +23,7 @@ app.get('/events/:id', function (req, res) {
 });
 
 app.post('/events', function (req, res) {
-    res.json(db.create(req.body.event));
+    res.json(db.create(req.body));
 });
 
 var apppath = require('path').resolve(__dirname + '/../../frontend');
