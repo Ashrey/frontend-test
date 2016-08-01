@@ -95,3 +95,4 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', ['scripts', 'styles', 'browserify', 'watch']);
+gulp.task('all', ['scripts', 'styles', 'browserify']);
