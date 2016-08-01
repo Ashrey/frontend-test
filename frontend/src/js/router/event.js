@@ -2,6 +2,8 @@ var Backbone      = require('backbone');
 var ListEventView = require('view/listEvent');
 var $             = require('jquery');
 var DetailsView   = require('view/details');
+var CreateView    = require('view/create');
+var Model         = require('model/event');
 
 module.exports = Backbone.Router.extend({
 
@@ -18,7 +20,8 @@ module.exports = Backbone.Router.extend({
 
     routes: {
         "":           "home",
-        "view/:id":   'view'
+        "view/:id":   'view',
+        "add":        'add'
     },
 
     home: function() {
@@ -49,6 +52,17 @@ module.exports = Backbone.Router.extend({
             model: model
         });
         $('#content').html(this.currentView.$el);
+    },
 
+    add: function(){
+        if(this.currentView){
+            this.currentView.close();
+        }
+        var model = new Model();
+        this.events.add(model);
+        this.currentView = new CreateView({
+            model: model
+        });
+        $('#content').html(this.currentView.$el);
     }
 });

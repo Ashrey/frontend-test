@@ -1,0 +1,38 @@
+<form>
+    <h2>Create a new Event</h2>
+<div class="medium-9 small-12 column" id="left-col">
+    <label>Title
+       <input type="text" name="title" required placeholder="Write a title">
+    </label>
+
+    <label>
+        Description
+        <textarea name="description"></textarea>
+    </label>
+
+    <label>
+        Dates (One date per line)
+        <textarea name="dates"></textarea>
+    </label>
+</div>
+
+<div class="medium-3 small-12 column"  id="right-col">
+    <label>Location
+       <input type="text" name="location" placeholder="Write a location">
+    </label>
+
+    <label>URL Image
+       <input type="url" name="eventImage" placeholder="Write a URL Image">
+    </label>
+
+    <div class="preview">
+        <img src="" alt="preview" />
+    </div>
+</div>
+
+<div class="text-right small-12 column">
+    <a href="#" class="button secondary">Cancel</a>
+    <button type="submit" class="button">Save</button>
+</div>
+
+</form>

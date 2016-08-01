@@ -1,7 +1,8 @@
 <div class="medium-9 small-12 column" id="left-col">
+
 {{#events}}
     {{#with attributes}}
-    <div class="small-12 medium-6 large-4 column end">
+    <div class="small-12 medium-6 column end">
         <div class="a-card">
             <div class="v-align">
                 <img src="{{eventImage}}" alt="Picture of {{title}}"/>
@@ -24,11 +25,15 @@
 </div>
 
 <div class="medium-3 small-12 column"  id="right-col">
+    <div class="right">
+        <a href="#add" class="button">Add Event</a>
+    </div>
+    <h3>Featured Events</h3>
 {{#features}}
     {{#with attributes}}
-    <div class="small-12">
-        {{title}}
-    </div>
+    <ul class="menu vertical">
+        <li><a href="#view/{{id}}">{{title}}</a></li>
+    </ul>
     {{/with}}
 {{else}}
 No hay eventos

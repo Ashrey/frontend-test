@@ -1,0 +1,23 @@
+.add-event{
+    textarea {
+        min-height: 5rem;
+    }
+
+
+    .preview{
+        height: 200px;
+        width: 100%;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 1rem;
+        img{
+            max-height: 200px;
+            margin: auto;
+            display: block;
+            border: 1px solid black;
+            //max-width: 90%;
+            //margin-left: 25%;
+        }
+    }
+}
