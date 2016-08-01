@@ -1,9 +1,9 @@
-var Backbone = require('backbone');
+var Base     = require('view/base');
 var tpl      = require('tpl/events-list.hbs');
 var shared   = require('tpl/shared.hbs');
 var $        = require('jquery');
 
-module.exports = Backbone.View.extend({
+module.exports = Base.extend({
     className: 'list-event',
 
     events:{
@@ -33,9 +33,5 @@ module.exports = Backbone.View.extend({
         var el =  $(e.currentTarget);
         var model = this.events_list.get(el.data('shared'));
         window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(shared(model.attributes)));
-    },
-
-    close: function(){
-
     }
 });
