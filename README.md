@@ -28,3 +28,12 @@ El último comando debe generar dos directorios **css** y **js**
 
 Proceder a ejecutar el backend con las instrucciones antes dadas. La aplicación
 podrá vizualizarse entonce en `http://localhost:3000`
+
+
+##Consideraciones
+- El ordenado del listado se hace por titulo, y no por fecha, ya que las fechas \
+son un array y sería mucho más complicado.
+
+##Preguntas
+Cualquier pregunta o inconveniente por favor, hacerlo saber a mi correo
+(alberroteran<at>gmail.com)
