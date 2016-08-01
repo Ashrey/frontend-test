@@ -1,6 +1,8 @@
 <div class="medium-9 small-12 column" id="left-col">
     <h2>{{title}} <small>{{location}}</small></h2>
     <p>{{description}}</p>
+
+    <a href="#" class="button">Back to the list</a>
 </div>
 
 <div class="medium-3 small-12 column"  id="right-col">
@@ -8,6 +10,8 @@
         <img src="{{eventImage}}"  alt="Imagen para {{title}}"/>
     </div>
     {{#if dates}}
+
+    <h4>Dates </h4>
     <ul>
         {{#dates}}
             <li>{{this}}</li>
